@@ -1,0 +1,72 @@
+{
+    "name": "preemstudio/laravel-turnstile",
+    "description": "A package to easily use Cloudflare Turnstile with Laravel.",
+    "keywords": [
+        "PreemStudio",
+        "laravel",
+        "laravel-turnstile"
+    ],
+    "homepage": "https://github.com/preemstudio/laravel-turnstile",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "brian@preem.studio",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/contracts": "^10.0",
+        "illuminate/support": "^10.0",
+        "spatie/laravel-package-tools": "^1.1"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.2",
+        "graham-campbell/analyzer": "^3.1",
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^6.0",
+        "nunomaduro/larastan": "^2.0",
+        "orchestra/testbench": "^8.0",
+        "pestphp/pest": "^1.2",
+        "pestphp/pest-plugin-laravel": "^1.1",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "spatie/laravel-ray": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "PreemStudio\\Turnstile\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true,
+            "ergebnis/composer-normalize": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PreemStudio\\Turnstile\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
