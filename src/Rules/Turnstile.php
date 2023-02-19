@@ -21,14 +21,14 @@ class Turnstile implements ValidationRule
 
         foreach ($errors as $error) {
             $fail(match ($error) {
-                'missing-input-secret'   => 'The secret parameter was not passed.',
-                'invalid-input-secret'   => 'The secret parameter was invalid or did not exist.',
-                'missing-input-response' => 'The response parameter was not passed.',
-                'invalid-input-response' => 'The response parameter is invalid or has expired.',
-                'bad-request'            => 'The request was rejected because it was malformed.',
-                'timeout-or-duplicate'   => 'The response parameter has already been validated before.',
-                'internal-error'         => 'An internal error happened while validating the response.',
-                default                  => 'An unexpected error occurred.',
+                'missing-input-secret'   => trans('laravel-turnstile::errors.missing-input-secret'),
+                'invalid-input-secret'   => trans('laravel-turnstile::errors.invalid-input-secret'),
+                'missing-input-response' => trans('laravel-turnstile::errors.missing-input-response'),
+                'invalid-input-response' => trans('laravel-turnstile::errors.invalid-input-response'),
+                'bad-request'            => trans('laravel-turnstile::errors.bad-request'),
+                'timeout-or-duplicate'   => trans('laravel-turnstile::errors.timeout-or-duplicate'),
+                'internal-error'         => trans('laravel-turnstile::errors.internal-error'),
+                default                  => trans('laravel-turnstile::errors.default'),
             });
         }
     }

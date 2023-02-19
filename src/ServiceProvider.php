@@ -15,7 +15,10 @@ class ServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
-        $package->name('laravel-turnstile')->hasViews();
+        $package
+            ->name('laravel-turnstile')
+            ->hasTranslations('laravel-turnstile')
+            ->hasViews('laravel-turnstile');
     }
 
     public function packageRegistered()
