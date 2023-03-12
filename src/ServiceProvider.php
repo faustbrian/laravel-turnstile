@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\Blade;
 use Illuminate\Validation\Rule;
 use PreemStudio\Turnstile\Rules\Turnstile;
 use PreemStudio\Turnstile\View\Components\Turnstile as TurnstileComponent;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
+use PreemStudio\Jetpack\Package\AbstractServiceProvider;
+use PreemStudio\Jetpack\Package\Package;
 
-class ServiceProvider extends PackageServiceProvider
+class ServiceProvider extends AbstractServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -21,12 +21,12 @@ class ServiceProvider extends PackageServiceProvider
             ->hasViews('laravel-turnstile');
     }
 
-    public function packageRegistered()
+    public function packageRegistered(): void
     {
         $this->app->singleton(Client::class, fn ($app) => new Client($app['config']->get('services.turnstile.secret')));
     }
 
-    public function packageBooted()
+    public function packageBooted(): void
     {
         Blade::component('turnstile', TurnstileComponent::class);
 
