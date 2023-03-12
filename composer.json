@@ -1,13 +1,12 @@
 {
     "name": "preemstudio/laravel-turnstile",
     "description": "A package to easily use Cloudflare Turnstile with Laravel.",
+    "license": "MIT",
     "keywords": [
         "PreemStudio",
         "laravel",
         "laravel-turnstile"
     ],
-    "homepage": "https://github.com/preemstudio/laravel-turnstile",
-    "license": "MIT",
     "authors": [
         {
             "name": "Brian Faust",
@@ -15,12 +14,29 @@
             "role": "Developer"
         }
     ],
+    "homepage": "https://github.com/preemstudio/laravel-turnstile",
     "require": {
         "php": "^8.1",
         "illuminate/contracts": "^10.0",
         "illuminate/support": "^10.0",
         "preemstudio/laravel-jetpack": "^1.0"
     },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.30",
+        "laravel/pint": "^1.6",
+        "mockery/mockery": "^1.5",
+        "nunomaduro/collision": "^6.4",
+        "nunomaduro/larastan": "^2.5",
+        "orchestra/testbench": "^8.0",
+        "pestphp/pest": "^1.22",
+        "pestphp/pest-plugin-laravel": "^1.4",
+        "phpstan/extension-installer": "^1.2",
+        "phpstan/phpstan-deprecation-rules": "^1.1",
+        "phpstan/phpstan-phpunit": "^1.3",
+        "spatie/laravel-ray": "^1.32"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "PreemStudio\\Turnstile\\": "src"
@@ -30,13 +46,6 @@
         "psr-4": {
             "Tests\\": "tests"
         }
-    },
-    "scripts": {
-        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint --config vendor/preemstudio/laravel-jetpack/pint.json"
     },
     "config": {
         "allow-plugins": {
@@ -53,20 +62,11 @@
             ]
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require-dev": {
-        "ergebnis/composer-normalize": "^2.30",
-        "laravel/pint": "^1.6",
-        "mockery/mockery": "^1.5",
-        "nunomaduro/collision": "^6.4",
-        "nunomaduro/larastan": "^2.5",
-        "orchestra/testbench": "^8.0",
-        "pestphp/pest": "^1.22",
-        "pestphp/pest-plugin-laravel": "^1.4",
-        "phpstan/extension-installer": "^1.2",
-        "phpstan/phpstan-deprecation-rules": "^1.1",
-        "phpstan/phpstan-phpunit": "^1.3",
-        "spatie/laravel-ray": "^1.32"
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "format": "vendor/bin/pint --config vendor/preemstudio/laravel-jetpack/pint.json",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage"
     }
 }
