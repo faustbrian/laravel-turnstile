@@ -19,7 +19,7 @@ final class Client
             ->asForm()
             ->acceptJson()
             ->post('https://challenges.cloudflare.com/turnstile/v0/siteverify', [
-                'secret' => $this->secret,
+                'secret'   => $this->secret,
                 'response' => $response,
             ]);
 
