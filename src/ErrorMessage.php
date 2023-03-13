@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PreemStudio\Turnstile;
 
-class ErrorMessage
+final class ErrorMessage
 {
     public static function match(string $error): string
     {

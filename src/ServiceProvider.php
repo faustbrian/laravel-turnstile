@@ -6,21 +6,12 @@ namespace PreemStudio\Turnstile;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Validation\Rule;
+use PreemStudio\Jetpack\Package\AbstractServiceProvider;
 use PreemStudio\Turnstile\Rules\Turnstile;
 use PreemStudio\Turnstile\View\Components\Turnstile as TurnstileComponent;
-use PreemStudio\Jetpack\Package\AbstractServiceProvider;
-use PreemStudio\Jetpack\Package\Package;
 
-class ServiceProvider extends AbstractServiceProvider
+final class ServiceProvider extends AbstractServiceProvider
 {
-    public function configurePackage(Package $package): void
-    {
-        $package
-            ->name('laravel-turnstile')
-            ->hasTranslations()
-            ->hasViews('laravel-turnstile');
-    }
-
     public function packageRegistered(): void
     {
         $this->app->singleton(Client::class, fn ($app) => new Client($app['config']->get('services.turnstile.secret')));

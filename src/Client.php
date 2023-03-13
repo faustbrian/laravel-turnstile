@@ -6,7 +6,7 @@ namespace PreemStudio\Turnstile;
 
 use Illuminate\Support\Facades\Http;
 
-class Client
+final class Client
 {
     public function __construct(private string $secret)
     {

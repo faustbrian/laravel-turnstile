@@ -11,7 +11,7 @@ use PreemStudio\Turnstile\Client;
 use PreemStudio\Turnstile\ErrorMessage;
 use Symfony\Component\HttpFoundation\Response;
 
-class VerifyTurnstile
+final class VerifyTurnstile
 {
     public function handle(Request $request, Closure $next): Response|RedirectResponse
     {

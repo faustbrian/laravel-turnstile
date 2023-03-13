@@ -7,7 +7,7 @@ namespace PreemStudio\Turnstile\View\Components;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Turnstile extends Component
+final class Turnstile extends Component
 {
     public function render(): View
     {

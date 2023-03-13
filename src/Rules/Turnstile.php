@@ -9,7 +9,7 @@ use Illuminate\Contracts\Validation\ValidationRule;
 use PreemStudio\Turnstile\Client;
 use PreemStudio\Turnstile\ErrorMessage;
 
-class Turnstile implements ValidationRule
+final class Turnstile implements ValidationRule
 {
     public function __construct(private Client $turnstile)
     {
