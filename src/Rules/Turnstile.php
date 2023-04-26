@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Turnstile\Rules;
 
-use Closure;
-use Illuminate\Contracts\Validation\ValidationRule;
 use BombenProdukt\Turnstile\Client;
 use BombenProdukt\Turnstile\ErrorMessage;
+use Closure;
+use Illuminate\Contracts\Validation\ValidationRule;
 
 final class Turnstile implements ValidationRule
 {

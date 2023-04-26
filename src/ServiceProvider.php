@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Turnstile;
 
-use Illuminate\Support\Facades\Blade;
-use Illuminate\Validation\Rule;
 use BombenProdukt\PackagePowerPack\Package\AbstractServiceProvider;
 use BombenProdukt\Turnstile\Rules\Turnstile;
 use BombenProdukt\Turnstile\View\Components\Turnstile as TurnstileComponent;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Validation\Rule;
 
 final class ServiceProvider extends AbstractServiceProvider
 {
