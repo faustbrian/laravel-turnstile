@@ -6,11 +6,6 @@ parameters:
 			path: src/Client.php
 
 		-
-			message: "#^Method BombenProdukt\\\\Turnstile\\\\ErrorMessage\\:\\:match\\(\\) should return string but returns mixed\\.$#"
-			count: 1
-			path: src/ErrorMessage.php
-
-		-
 			message: "#^Parameter \\#1 \\$response of method BombenProdukt\\\\Turnstile\\\\Client\\:\\:verify\\(\\) expects string, mixed given\\.$#"
 			count: 1
 			path: src/Rules/Turnstile.php
