@@ -4,20 +4,6 @@
     </a>
 </p>
 
-<p align="center">
-    <a href="https://github.com/faustbrian/laravel-turnstile/actions">
-        <img src="https://badge.sh/github/check-runs/BombenProdukt/laravel-turnstile" alt="Checks" />
-    </a>
-    <a href="https://packagist.org/packages/bombenprodukt/laravel-turnstile">
-        <img src="https://badge.sh/packagist/downloads/BombenProdukt/laravel-turnstile" alt="Downloads" />
-    </a>
-    <a href="https://packagist.org/packages/bombenprodukt/laravel-turnstile">
-        <img src="https://badge.sh/packagist/version/BombenProdukt/laravel-turnstile" alt="Version" />
-    </a>
-    <a href="https://packagist.org/packages/bombenprodukt/laravel-turnstile">
-        <img src="https://badge.sh/packagist/license/BombenProdukt/laravel-turnstile" alt="License" />
-    </a>
-</p>
 
 ## About Laravel Turnstile
 
