@@ -2,7 +2,7 @@ style: github
 template: CHANGELOG.tpl.md
 info:
   title: CHANGELOG
-  repository_url: https://github.com/BombenProdukt/laravel-turnstile
+  repository_url: https://github.com/faustbrian/laravel-turnstile
 options:
   commits:
     filters:
