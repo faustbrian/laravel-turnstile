@@ -6,6 +6,11 @@ parameters:
 			path: src/Client.php
 
 		-
+			message: "#^Construct empty\\(\\) is not allowed\\. Use more strict comparison\\.$#"
+			count: 1
+			path: src/Http/Middleware/VerifyTurnstile.php
+
+		-
 			message: "#^Parameter \\#1 \\$response of method BombenProdukt\\\\Turnstile\\\\Client\\:\\:verify\\(\\) expects string, mixed given\\.$#"
 			count: 1
 			path: src/Rules/Turnstile.php
