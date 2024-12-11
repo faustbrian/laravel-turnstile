@@ -1,0 +1,23 @@
+{
+    "symbol-whitelist": [
+        "array",
+        "bool",
+        "false",
+        "int",
+        "null",
+        "self",
+        "string",
+        "true",
+        "app",
+        "Illuminate\\Contracts\\Validation\\ValidationRule",
+        "Illuminate\\Contracts\\View\\View",
+        "Illuminate\\Http\\Request",
+        "Illuminate\\Support\\Facades\\Blade",
+        "Illuminate\\Support\\Facades\\Http",
+        "Illuminate\\Validation\\Rule",
+        "Illuminate\\View\\Component",
+        "redirect",
+        "trans",
+        "view"
+    ]
+}

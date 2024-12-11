@@ -1,0 +1,36 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Cannot call method in\\(\\) on iterable\\<SplFileInfo\\>\\.$#"
+			count: 1
+			path: .php-cs-fixer.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Turnstile\\\\Client\\:\\:verify\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Client.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Turnstile\\\\Client\\:\\:verify\\(\\) should return array but returns mixed\\.$#"
+			count: 1
+			path: src/Client.php
+
+		-
+			message: "#^Construct empty\\(\\) is not allowed\\. Use more strict comparison\\.$#"
+			count: 1
+			path: src/Http/Middleware/VerifyTurnstile.php
+
+		-
+			message: "#^Parameter \\#1 \\$response of method BaseCodeOy\\\\Turnstile\\\\Client\\:\\:verify\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Rules/Turnstile.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Validation\\\\Rule\\:\\:\\$app\\.$#"
+			count: 1
+			path: src/ServiceProvider.php
+
+		-
+			message: "#^Undefined variable\\: \\$this$#"
+			count: 1
+			path: tests/Pest.php
